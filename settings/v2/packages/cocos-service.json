@@ -1,0 +1,95 @@
+{
+  "game": {
+    "app_id": "624695288",
+    "c_id": "0",
+    "name": "泡泡"
+  },
+  "appConfigMaps": [
+    {
+      "app_id": "UNKNOW",
+      "config_id": "7177ca"
+    },
+    {
+      "app_id": "624695288",
+      "config_id": "c47b2b"
+    }
+  ],
+  "configs": [
+    {
+      "app_id": "UNKNOW",
+      "config_id": "7177ca",
+      "config_name": "Default",
+      "config_remarks": "",
+      "services": [
+        {
+          "service_id": "278",
+          "enable": false,
+          "param": {}
+        },
+        {
+          "service_id": "312",
+          "enable": false,
+          "param": {}
+        },
+        {
+          "service_id": "235",
+          "enable": false,
+          "param": {}
+        },
+        {
+          "service_id": "302",
+          "enable": false,
+          "param": {}
+        }
+      ]
+    },
+    {
+      "app_id": "624695288",
+      "config_id": "c47b2b",
+      "config_name": "Default",
+      "config_remarks": "",
+      "services": [
+        {
+          "service_id": "312",
+          "enable": false,
+          "param": {}
+        },
+        {
+          "service_id": "278",
+          "enable": false,
+          "param": {
+            "configId": "73f457",
+            "plugin_version": "2.0.4_0.2.0"
+          }
+        }
+      ]
+    }
+  ],
+  "sdkHubConfigSet": [
+    {
+      "id": "73f457",
+      "name": "HUAWEI  AppGallery Connect",
+      "platform": "3",
+      "channelID": "161221",
+      "channelName": "HUAWEI  AppGallery Connect",
+      "remarks": "HUAWEI  AppGallery Connect",
+      "plugins": [
+        {
+          "hasParam": false,
+          "pParam": {},
+          "pId": "2412",
+          "pName": "HUAWEI_HMS",
+          "packageName": "huawei-hms",
+          "pType": 30,
+          "pUseType": 30,
+          "hasLocal": true,
+          "hasUpdate": false,
+          "requireParam": true,
+          "pVersion": "2.0.2_5.3.0",
+          "isInstall": false,
+          "installProgress": true
+        }
+      ]
+    }
+  ]
+}

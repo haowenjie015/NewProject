@@ -1,0 +1,12 @@
+{
+  "name": "NewProject",
+  "type": "3d",
+  "uuid": "cc556977-c37c-4f83-ae5c-834439a7e76c",
+  "version": "3.3.1",
+  "creator": {
+    "version": "3.3.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.4"
+  }
+}
