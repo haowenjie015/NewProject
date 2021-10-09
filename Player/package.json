@@ -1,0 +1,12 @@
+{
+  "name": "Player",
+  "type": "3d",
+  "uuid": "28c3625d-6141-4be2-9fb4-b9d74da6b1eb",
+  "version": "3.2.0",
+  "creator": {
+    "version": "3.2.0"
+  },
+  "dependencies": {
+    "js-cookie": "^3.0.1"
+  }
+}

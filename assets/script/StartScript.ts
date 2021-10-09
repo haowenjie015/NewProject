@@ -1,5 +1,7 @@
 
 import axios from '../../node_modules/axios/dist/axios.min.js';
+import Cookies from "js-cookie"
+
 import { _decorator, Component, Node, CCObject, EditBox, Button, Label, color, Color } from 'cc';
 
 const { ccclass, property } = _decorator;
@@ -29,51 +31,7 @@ export class StartScript extends Component {
     @property(Label)
     label:Label = null;
 
-    onLoad () {
-      //判断是否第一次进入
-     // var cookies = document.cookie; //获取cookie值
-      var newVisitor = isNewVisitor();
-   
-
-     if(newVisitor === true){
-     // 动画弹出消息框
-         alert('您是新用户！');
-  
-         // 标记：已经向该访客弹出过消息。30天之内不要再弹
-        setCookie("gznotes-visited","true", 5);
-        }else{
-          alert('您已登录！');
-        }
-      
-
-     function isNewVisitor() {
-           // 从cookie读取“已经向访客提示过消息”的标志位
-            var flg = getCookie("gznotes-visited");
-              if (flg === "") {
-              return true;
-           } else {
-               return false;
-            }
-          }
-// 写字段到cookie
-     function setCookie(cname, cvalue, exdays) {
-         var d = new Date();
-        d.setTime(d.getTime() + (exdays*24*60*60*1000));
-       var expires = "expires="+d.toUTCString();
-          document.cookie = cname + "=" + cvalue + "; " + expires +";path=/";
-        } 
-          // 读cookie
-          function getCookie(cname) {
-                   var name = cname + "=";
-                    var ca = document.cookie.split(';');
-                    for(var i=0; i<ca.length; i++) {
-                       var c = ca[i];
-                       while (c.charAt(0)==' ') c = c.substring(1);
-                       if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
-                     }
-                     return "";
-                  }
-    }
+    onLoad () {}
 
     start () {
         // [3]
@@ -98,6 +56,8 @@ export class StartScript extends Component {
           this.editbox.string=''
           }else{
               //注册成功，跳转页面
+              Cookies.set("userNameofNewPro", name);
+              window.location.href = "http://www.huanggaole.com/NewProject/Player";
           }
         }).catch((err)=>{
           console.error(err)
